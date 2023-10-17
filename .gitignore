@@ -1,0 +1,76 @@
+#____________Server_________________
+
+# Virtual Environment
+venv/
+*.pyc
+__pycache__/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Editor/IDE configuration files
+.vscode/
+
+# Compiled Python files
+*.pyc
+
+# Python caches
+__pycache__/
+.pyc
+
+# Database
+db.sqlite
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+*.sqlite
+
+# Other
+*.swp
+
+#____________Client___________
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+client/todo_with_login/node_modules
+client/todo_with_login/.pnp
+client/todo_with_login/.pnp.js
+
+# testing
+client/todo_with_login/coverage
+
+# next.js
+client/todo_with_login/.next/
+client/todo_with_login/out/
+
+# production
+client/todo_with_login/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+client/todo_with_login/.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

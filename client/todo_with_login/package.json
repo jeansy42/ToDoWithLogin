@@ -1,0 +1,37 @@
+{
+  "name": "todo_with_login",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@material-tailwind/react": "^2.1.2",
+    "@types/js-cookie": "^3.0.4",
+    "@types/react-datepicker": "^4.15.1",
+    "axios": "^1.5.1",
+    "date-fns": "^2.30.0",
+    "js-cookie": "^3.0.5",
+    "next": "latest",
+    "react": "latest",
+    "react-datepicker": "^4.18.0",
+    "react-dom": "latest",
+    "react-hook-form": "^7.47.0",
+    "react-select": "^5.7.7"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "^10.4.16",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "^8.4.30",
+    "tailwindcss": "^3.3.3",
+    "typescript": "latest"
+  }
+}
