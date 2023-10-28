@@ -55,14 +55,13 @@ function TasksByDueDate() {
           ...okWeekTasks,
           ...okMonthTasks,
         ]);
-  
+
         setTasksToday(todayTasks);
         setTasksTomorrow(tomorrowTasks);
         setTasksWeek(okWeekTasks);
         setTasksMonth(okMonthTasks);
         setTasksYear(okYearTasks);
         setTasksBeyondThisYear(otherTasks);
-        
       } catch (error) {
         console.log(error);
       } finally {

@@ -43,6 +43,16 @@ export const getHighPriorityTasks = async (): Promise<TaskInterface[]> => {
   return res.data;
 };
 
+/**Get tasks by status */
+export const getCompletedTasks = async (): Promise<TaskInterface[]> => {
+  const res = await axios.get("/tasks?status=completed&order=due_dateA");
+  return res.data;
+};
+export const getPendingTasks = async (): Promise<TaskInterface[]> => {
+  const res = await axios.get("/tasks?status=pending&order=due_dateA");
+  return res.data;
+};
+
 /**Set status task */
 export const setStatusTask = async (id: number, csrf: string) => {
   const res = await axios.put(`/tasks/set_status/${id}`, null, {

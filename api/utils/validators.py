@@ -131,7 +131,7 @@ class LabelValidator(Schema):
                     func.lower(Label.title) == func.lower(value),
                 )
             )
-        )
+        ).scalar_one_or_none()
         if found_label:
             raise ValidationError(
                 f"'{value}' is already exists in current user's labels."
@@ -152,7 +152,7 @@ class ProjectValidator(Schema):
                     func.lower(Project.title) == func.lower(value),
                 )
             )
-        )
+        ).scalar_one_or_none()
         if found_project:
             raise ValidationError(
                 f"'{value}' is already exists in current user's projects."

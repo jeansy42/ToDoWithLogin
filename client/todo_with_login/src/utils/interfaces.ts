@@ -10,6 +10,28 @@ export interface AuthContextInterface {
   showCompleted: boolean;
   hideOverdueTasks: boolean;
   showSortOptions: boolean;
+  labels: LabProInterface[];
+  projects: LabProInterface[];
+  elementToScroll: React.MutableRefObject<HTMLDivElement | null>;
+  isScroll: boolean;
+  activeToScroll: string;
+  showProjects: boolean;
+  showLabels: boolean;
+  showStatus: boolean;
+
+  completedTasks: TaskInterface[];
+  pendingTasks: TaskInterface[];
+
+  setPendingTasks: React.Dispatch<React.SetStateAction<TaskInterface[]>>;
+  setCompletedTasks: React.Dispatch<React.SetStateAction<TaskInterface[]>>;
+
+  setShowProjects: React.Dispatch<React.SetStateAction<boolean>>;
+  setShowLabels: React.Dispatch<React.SetStateAction<boolean>>;
+  setShowStatus: React.Dispatch<React.SetStateAction<boolean>>;
+  setActiveToScroll: React.Dispatch<React.SetStateAction<string>>;
+  setIsScroll: React.Dispatch<React.SetStateAction<boolean>>;
+  setLabels: React.Dispatch<React.SetStateAction<LabProInterface[]>>;
+  setProjects: React.Dispatch<React.SetStateAction<LabProInterface[]>>;
   setShowLabel: React.Dispatch<React.SetStateAction<boolean>>;
   setShowCompleted: React.Dispatch<React.SetStateAction<boolean>>;
   setHideOverdueTasks: React.Dispatch<React.SetStateAction<boolean>>;
@@ -20,6 +42,26 @@ export interface AuthContextInterface {
   setCsrfToken: React.Dispatch<React.SetStateAction<string | undefined>>;
   setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+export interface DashboardContextInterface {
+  addOrUpdLabel: AddOrUpdLabPro;
+  addOrUpdProject: AddOrUpdLabPro;
+  refreshLabels: number;
+  refreshProjects: number;
+  setAddOrUpdProject: React.Dispatch<React.SetStateAction<AddOrUpdLabPro>>;
+  setAddOrUpdLabel: React.Dispatch<React.SetStateAction<AddOrUpdLabPro>>;
+  setRefreshLabels: React.Dispatch<React.SetStateAction<number>>;
+  setRefreshProjects: React.Dispatch<React.SetStateAction<number>>;
+  labelToUpdate: LabProToUpdateInterface;
+  setLabelToUpdate: React.Dispatch<
+    React.SetStateAction<LabProToUpdateInterface>
+  >;
+  projectToUpdate: LabProToUpdateInterface;
+  setProjectToUpdate: React.Dispatch<
+    React.SetStateAction<LabProToUpdateInterface>
+  >;
+}
+
 export interface CredentialsInterface {
   email: string;
   password: string;
@@ -45,4 +87,21 @@ export interface TaskFormInterface {
   description: string;
   priority: { label: string; value: string } | null;
   due_date: string;
+}
+
+export interface LabProInterface {
+  id: number;
+  title: string;
+  color?: string;
+  tasks: TaskInterface[];
+}
+
+export interface LabProToUpdateInterface {
+  id: number;
+  title: string;
+}
+
+export interface AddOrUpdLabPro {
+  state: boolean;
+  action: "a" | "u";
 }

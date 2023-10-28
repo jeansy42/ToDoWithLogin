@@ -1,4 +1,4 @@
-import { TaskInterface } from "./interfaces";
+import { LabProInterface, TaskInterface } from "./interfaces";
 
 export const defineTask = (task: TaskInterface): TaskInterface => {
   if (task.description === "") {
@@ -26,4 +26,27 @@ export const removeDuplicateTasks = (
     });
     return okTasks;
   } else return tasksToFilter;
+};
+
+export const addColors = (
+  colors: string[],
+  list: LabProInterface[]
+): LabProInterface[] => {
+  let count = -1;
+  const labProWithColor = list.map((label) => {
+    if (count === colors.length) count = -1;
+    count++;
+    return { ...label, color: colors[count] };
+  });
+  return labProWithColor;
+};
+
+export const selectLabel = (type: "l" | "p", action: "u" | "a"): string => {
+  if (type === "l") {
+    if (action === "a") return "New Label";
+    else return "Update Label";
+  } else {
+    if (action === "a") return "New Project";
+    else return "Update Project";
+  }
 };

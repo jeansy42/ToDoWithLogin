@@ -44,9 +44,18 @@ function TasksByPriority() {
   else
     return (
       <div className="flex flex-col gap-4 px-3">
-        <TaskSection tasks={highPTasks} text="High Priority" />
-        <TaskSection tasks={mediumPTasks} text="Medium Priority" />
-        <TaskSection tasks={lowPTasks} text="Low Priority" />
+        <TaskSection
+          tasks={highPTasks}
+          text="High Priority"
+        />
+        <TaskSection
+          tasks={mediumPTasks}
+          text="Medium Priority"
+        />
+        <TaskSection
+          tasks={lowPTasks}
+          text="Low Priority"
+        />
       </div>
     );
 }

@@ -16,4 +16,8 @@ class Project(db.Model):
         self.user_id = user_id
 
     def to_dict(self):
-        return {"title": self.title, "tasks": [f.to_dict() for f in self.tasks]}
+        return {
+            "id": self.id,
+            "title": self.title,
+            "tasks": [f.to_dict() for f in self.tasks],
+        }

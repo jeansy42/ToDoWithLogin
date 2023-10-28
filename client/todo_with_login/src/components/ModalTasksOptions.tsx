@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import React from "react";
 import OptionCard from "./subcomponents/OptionCard";
-import { useAuthContext } from "@/utils/useAuthContext";
+import { useAuthContext } from "@/hooks/useAuthContext";
 import { AuthContextInterface } from "@/utils/interfaces";
 
 function ModalTasksOptions() {

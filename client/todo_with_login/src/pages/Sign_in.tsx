@@ -16,7 +16,7 @@ import {
 
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import { useAuthContext } from "@/utils/useAuthContext";
+import { useAuthContext } from "@/hooks/useAuthContext";
 import Link from "next/link";
 
 function Sig_in() {
@@ -39,7 +39,7 @@ function Sig_in() {
         setCsrfToken(cookies.get("csrf_access_token"));
         reset();
         setUser(res.data.user);
-        router.push("/tasks");
+        router.push("/");
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {

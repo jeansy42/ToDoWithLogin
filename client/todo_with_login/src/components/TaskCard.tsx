@@ -2,7 +2,7 @@
 import axios from "axios";
 import { AuthContextInterface, TaskInterface } from "@/utils/interfaces";
 import { setStatusTask } from "@/utils/requestsTasks";
-import { useAuthContext } from "@/utils/useAuthContext";
+import { useAuthContext } from "@/hooks/useAuthContext";
 import { Checkbox, Spinner } from "@material-tailwind/react";
 import { useState } from "react";
 function TaskCard({ task }: { task: TaskInterface }) {

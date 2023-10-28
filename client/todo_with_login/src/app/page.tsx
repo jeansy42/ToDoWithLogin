@@ -1,5 +1,7 @@
+"use client";
 import ProtectedRoutes from "@/components/ProtectedRoutes";
 import SpinnerLoading from "@/components/SpinnerLoading";
+import DashboardContext from "@/context/DashboardContext";
 import dynamic from "next/dynamic";
 
 const DashboarComponent = dynamic(() => import("@/pages/Dashboard"), {
@@ -10,7 +12,9 @@ const DashboarComponent = dynamic(() => import("@/pages/Dashboard"), {
 function Home() {
   return (
     <ProtectedRoutes>
-      <DashboarComponent />
+      <DashboardContext>
+        <DashboarComponent />
+      </DashboardContext>
     </ProtectedRoutes>
   );
 }

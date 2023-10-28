@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import avatarPic from "@/style/images/avatar-1577909_1280.png";
 import { Cog6ToothIcon, Squares2X2Icon } from "@heroicons/react/24/outline";
-import { useAuthContext } from "@/utils/useAuthContext";
+import { useAuthContext } from "@/hooks/useAuthContext";
 import { AuthContextInterface } from "@/utils/interfaces";
 import { EllipsisHorizontalIcon } from "@heroicons/react/20/solid";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";

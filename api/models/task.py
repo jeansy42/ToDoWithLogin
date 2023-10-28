@@ -106,4 +106,4 @@ class Label(db.Model):
 
     def to_dict(self):
         tasks = [t.to_dict() for t in self.tasks]
-        return {"title": self.title, "tasks": tasks}
+        return {"id": self.id, "title": self.title, "tasks": tasks}

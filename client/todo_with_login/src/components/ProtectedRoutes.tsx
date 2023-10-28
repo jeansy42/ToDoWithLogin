@@ -2,7 +2,7 @@
 import cookies from "js-cookie";
 import { AuthContextInterface } from "@/utils/interfaces";
 import { verifyIsAuthenticated } from "@/utils/requests";
-import { useAuthContext } from "@/utils/useAuthContext";
+import { useAuthContext } from "@/hooks/useAuthContext";
 import { redirect, usePathname } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
 import SpinnerLoading from "./SpinnerLoading";

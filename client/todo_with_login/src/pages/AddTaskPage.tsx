@@ -14,7 +14,7 @@ import Datepicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { AuthContextInterface, TaskFormInterface } from "@/utils/interfaces";
 import InvalidInputMessage from "@/components/InvalidInputMessage";
-import { useAuthContext } from "@/utils/useAuthContext";
+import { useAuthContext } from "@/hooks/useAuthContext";
 import { createTask } from "@/utils/requests";
 import { defineTask } from "@/utils/auxiliarFunctions";
 

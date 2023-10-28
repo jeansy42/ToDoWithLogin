@@ -1,7 +1,7 @@
 "use client";
 
 import { AuthContextInterface } from "@/utils/interfaces";
-import { useAuthContext } from "@/utils/useAuthContext";
+import { useAuthContext } from "@/hooks/useAuthContext";
 import ModalTasksOptions from "./ModalTasksOptions";
 import SortedByOptions from "./SortedByOptions";
 

@@ -1,7 +1,5 @@
 from flask import Blueprint, request
 from flask_jwt_extended import jwt_required, current_user
-from sqlalchemy import and_
-from utils.db import db
 from utils.validators import LabelValidator
 from models.task import Label
 from services.label_services import (
@@ -10,6 +8,7 @@ from services.label_services import (
     delete_label_service,
     get_labels_service,
     add_label_service,
+    verify_label_exists_service,
 )
 
 
@@ -51,3 +50,12 @@ def get_upt_or_del_label(id):
 
     else:
         return {"message": "Label not found"}, 404
+
+
+@labels.route("/labels/verify_creation", methods=["POST"])
+@jwt_required()
+def verify_creation_label():
+    title = request.json.get("title", None)
+    if title:
+        return verify_label_exists_service(title=title, user_id=current_user.id)
+    return {"message": "Title is required!"}, 400
